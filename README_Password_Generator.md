@@ -29,11 +29,19 @@ Password generator showing password
 
 ### Popup Boxes
 
-
+1. alert
+2. prompt box for number of characters
+3. confirm boxes for uppercase letters, lowercase letters, numbers, and symbols.
+4. Turned boxes into functions to write user preferences to console
+5. Added while loop to password length to force use to pick length within specified range.
 
 
 ### Arrays
 
+1. I add an array for numbers beginning with 0 and ending at 9.
+2. I add an array for uppercase letters.
+3. I add an array for lowercase letters.
+2. I add an array for special characters.
 
 
 
