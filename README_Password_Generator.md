@@ -1,9 +1,8 @@
 # Password_Generator
 
-
 ## Description
 
-The goal is to create a password generator that will generate a random password given user input for the number of characters and which character sets to include from numbers, uppercase letters, lowercase letters, symbols.
+The goal is to create a password generator that will generate a random password given user-selected password length and character sets (potentially including numbers, uppercase letters, lowercase letters, and/orsymbols.
 
 Display of provided password generator box
 
@@ -11,7 +10,7 @@ Display of provided password generator box
 
 Password generator showing password
 
-![PAssword generator outcome](/assets/images/*******************.png)
+![Password generator outcome](/assets/images/*******************.png)
 
 
 ## Process
@@ -33,24 +32,22 @@ Password generator showing password
 2. prompt box for number of characters
 3. confirm boxes for uppercase letters, lowercase letters, numbers, and symbols.
 4. Turned boxes into functions to write user preferences to console
-5. Added while loop to password length to force use to pick length within specified range.
+5. Added ```while``` loop to the ```getLength()``` fuction to force user to pick length within specified range and to make sure it's a number.
+6. I logged the result of each box to the console to make sure it was working propperly.
 
 
 ### Arrays
 
-1. I add an array for numbers beginning with 0 and ending at 9.
-2. I add an array for uppercase letters.
-3. I add an array for lowercase letters.
-2. I add an array for special characters.
-
-
+1. I added an array for numbers beginning with 0 and ending at 9. I decided to make these strings so that the resulting password would come out correctly.
+2. I added an array for uppercase letters.
+3. I added an array for lowercase letters.
+4. I added an array for special characters.
+5. I added an empty array to hold the character sets the user selected.
+6. I added an empty array to hold random characters selected for the password.
 
 
 ### Functions
-
-
-
-
+1. After building out my boxes and arrays, I started thinking about how to collect the information and turn that into a usable array for generating characters  
 
 
 
@@ -62,7 +59,9 @@ As always suggestions are welcome. I have used the methods I have at hand at the
 ## Credits
 
 - [W3 Schools: JavaScript Popup Boxes](https://www.w3schools.com/js/js_popup.asp)
-
+- [W3 Schools: JavaScript Array concat()](https://www.w3schools.com/jsref/jsref_concat_array.asp)
+- [O'Reilly: Chapter 5. Working with Arrays and Loops](https://www.oreilly.com/library/view/javascript-cookbook/9781449390211/ch05.html)
+- [thisPointer: Convert array to string without comma in javascript](https://thispointer.com/convert-array-to-string-without-comma-in-javascript/)
 - Trilogy Education Services, LLC for the original index.html and style.css files.
 
 

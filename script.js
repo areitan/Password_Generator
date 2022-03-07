@@ -15,7 +15,7 @@ generateBtn.addEventListener("click", writePassword);
 
 
 // Creates an array containing possible numbers
-var numberArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 // Creates an array containing possible UPPERCARE letters
 var upperArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -24,51 +24,68 @@ var upperArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 var lowerArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 // Creates an array containing possible uppercase letters
-var symbolArray = ["!", "#", "'", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", ":", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", '"'];
+var symbolArray = ["!", "#", "'", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", ":", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", '"', "\\"];
 
-// "\"
-
-// Creates an empty array for pushing random values to
+// An empty array for pushing random values to
 var randomArray = []
 
-// Creates an empty array for pushing user preferences
+// An empty array for pushing user preferences
 var preferenceArray = []
 
+// function to build password
+function generatePassword() {
 // Initial popup boxes
 // password alert
 alert("Would you like to generate a password?");
 
 // Select length
 function getLength(){
-  var pwLength = prompt("How many characters?", "Select 8 to 128 characters");
-  while ((pwLength < 8) || (pwLength > 128)) {
-    pwLength = prompt("How many characters?", "Select 8 to 128 characters");
+  var pwLength = prompt("Please enter password length.", "Select 8 to 128 characters");
+  while ((pwLength < 8) || (pwLength > 128) || isNaN(pwLength)) {
+    pwLength = prompt("Please enter a valid password length.", "8 to 128 characters");
   }
     console.log(pwLength);
   }
 
   // Confirm uppercase
   function includeUpper(){
-    var getUpper = confirm("Would you like to include numbers?\nExample: 1,2,3,...");
+    var getUpper = confirm("Would you like to include uppercase letters?\nExample: A,B,C,...");
       console.log(getUpper);
+      if (getUpper === true) {
+        // Concat array upperArray to preferenceArray
+        preferenceArray.concat[upperArray]
+      }
     }
 
   // Confirm lowercase
   function includeLower(){
     var getLower = confirm("Would you like to include lowercase letters?\nExample: a, b, c...");
       console.log(getLower);
+      if (getLower === true) {
+        // Concat array lowerArray to preferenceArray
+        preferenceArray.concat[lowerArray]
+      }
     }
 
   // Confirm numbers
   function includeNum(){
     var getNumbers = confirm("Would you like to include numbers?\nExample: 1,2,3,...");
       console.log(getNumbers);
+      if (getNumbers === true) {
+        // Concat array numberArray to preferenceArray
+        preferenceArray.concat[numberArray]
+      }
     }
 
   // Confirm symbols
   function includeSymbol(){
     var getSymbols = confirm("Would you like to include symbols?\nExample: #, &, @...");
       console.log(getSymbols);
+      if (getSymbols === true) {
+        // Concat array symbolArray to preferenceArray
+        preferenceArray.concat[symbolArray]
+      }
+
     }
 
   getLength()
@@ -77,42 +94,20 @@ function getLength(){
   includeNum()
   includeSymbol()
 
-  
+// Loops through preferenceArray picking random characters until it reaches pwLength length
+  for (var i = 0; i < pwLength; i++) { 
+  // Picks random characters
+var rand = Math.floor(Math.random() * preferenceArray.length);
+  // Concatinates random characters to randomArray
+randomArray.concat(preferenceArray[rand])
+}
+// check for user preference characters at least 1 from each selected group
 
-  // if (getUpper === true) {
-  //   temporary.push()
-  // }
+// convert password to string without commas
+var finalPassword  = randomArray.join(""); {
+  console.log(finalPassword);
+// return finalPassword
 
-
-// Make values on console available for use in if statements
-  // if (uppercase == false && lowercase === false && numbers === false && symbols === false){
-  //   alert("You have not chosen any character types");
-  // }
-  
-
-
-// Creates a temporary array for user preferences
-// var preferenceArray = [getUpper, getLower, getNumbers, getSymbols];
-// console.log(preferenceArray);
-
-
-
-// Loops through temporary array picking random characters until it reaches pasword length
-//   for (var i = 0; i < pwLength; i++) { 
-//     console.log("");
-// }
-
-// Random characters
-// var rand = Math.floor(Math.random() * randomArray.length);
-// var concat = randomArray[rand];
-// function random() {
-//    document.getElementById("demo").innerHTML = (concat);
-// }
-
-
-
-
-// {
-//   return password
-// }
-
+// generatePassword()
+}  
+}
