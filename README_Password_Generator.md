@@ -32,8 +32,9 @@ Password generator showing password
 2. prompt box for number of characters
 3. confirm boxes for uppercase letters, lowercase letters, numbers, and symbols.
 4. Turned boxes into functions to write user preferences to console
-5. Added ```while``` loop to the ```getLength()``` fuction to force user to pick length within specified range and to make sure it's a number.
+5. I made a variable called pwdLength to capture the user input from a prompt box asking for password length. I added a ```while``` loop to force user to pick length within specified range and to make sure it's a number.
 6. I logged the result of each box to the console to make sure it was working propperly.
+7. I added confirm modals to get user input for the types of characters to include.
 
 
 ### Arrays
@@ -47,7 +48,9 @@ Password generator showing password
 
 
 ### Functions
-1. After building out my boxes and arrays, I started thinking about how to collect the information and turn that into a usable array for generating characters  
+1. After building out my boxes and arrays, I started thinking about how to collect the information and turn that into a usable array for generating characters
+2. For each type of character set, I asked if the confirm evaluated to true. If it does, the array for that character set is concatinated to the empty array I created for the users prefered chracter sets to include in the password.
+3. I added a for loop to pick random characters from the prefered characters array and concatinate them into an array for random characters to build the passord. 
 
 
 
