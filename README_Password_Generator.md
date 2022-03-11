@@ -10,7 +10,39 @@ Display of provided password generator box
 
 Password generator showing password
 
-![Password generator outcome](/assets/images/*******************.png)
+![Password generator outcome](/assets/images/password.png)
+
+
+By enering data into the prompts, you generate a randome password containing characters from the users chosen character sets.
+
+Alert
+
+![Alert](/assets/images/create_password.png)
+
+Prompt for password length
+
+![Prompt for length](/assets/images/pwd_length_screen1.png)
+
+Prompt for invalid password length entry
+
+![Prompt for invalid length](/assets/images/pwd_length.png)
+
+Confirm for uppercase letters
+
+![Confirm for uppercase ](/assets/images/uppercase.png)
+
+Confirm for lowercase letters
+
+![Confirm for lowercase](/assets/images/lowercase.png)
+
+Confirm for numbers 
+
+![Confirm for numbers](/assets/images/numbers.png)
+
+Confirm for symbols
+
+![Confirm for symbols](/assets/images/symbols.png)
+
 
 
 ## Process
