@@ -24,7 +24,7 @@ var upperArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 var lowerArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 // Creates an array containing possible uppercase letters
-var symbolArray = ["!", "#", "'", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", ":", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", '"', "\\"];
+var symbolArray = ["!", "#", "'", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ";", ":", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", '"', "\\"];
 
 // An empty array for random values
 var randomArray = []
@@ -32,82 +32,104 @@ var randomArray = []
 // An empty array for pushing user preferences
 var preferenceArray = []
 
+var getUpper
+var getLower
+var getNumbers
+var getSymbols
+var pwLength
+
+
 // function to build password
 function generatePassword() {
 
   // Initial popup boxes
-// password alert
-alert("Would you like to generate a password?");
+  // password alert
+  alert("Would you like to generate a password?");
 
-// Select length
-var pwLength = prompt("Please enter password length.", "Select 8 to 128 characters");
+  // Select length
+  pwLength = parseInt(prompt("Please enter password length.", "Select 8 to 128 characters"));
   while ((pwLength < 8) || (pwLength > 128) || isNaN(pwLength)) {
-    pwLength = prompt("Please enter a valid password length.", "8 to 128 characters");
+    pwLength = parseInt(prompt("Please enter a valid password length.", "8 to 128 characters"));
   }
-    console.log(pwLength);
-   
+  console.log(pwLength);
+
 
   // Confirm uppercase
-  function includeUpper(){
-    var getUpper = confirm("Would you like to include uppercase letters?\nExample: A,B,C,...");
-      console.log(getUpper);
-      if (getUpper === true) {
-        // Concat array upperArray to preferenceArray
-        preferenceArray.concat[upperArray]
+  function includeUpper() {
+    getUpper = confirm("Would you like to include uppercase letters?\nExample: A,B,C,...");
+    console.log(getUpper);
+    if (getUpper === true) {
+      // Concat array upperArray to preferenceArray
+      for (var i = 0; i < upperArray.length; i++) {
+        preferenceArray.push(upperArray[i])
       }
-    };
+    }
+    return preferenceArray;
+  };
+  
 
   // Confirm lowercase
-  function includeLower(){
-    var getLower = confirm("Would you like to include lowercase letters?\nExample: a, b, c...");
-      console.log(getLower);
-      if (getLower === true) {
-        // Concat array lowerArray to preferenceArray
-        preferenceArray.concat[lowerArray]
+  function includeLower() {
+    getLower = confirm("Would you like to include lowercase letters?\nExample: a, b, c...");
+    console.log(getLower);
+    if (getLower === true) {
+      // Concat array lowerArray to preferenceArray
+      for (var i = 0; i < lowerArray.length; i++) {
+        preferenceArray.push(lowerArray[i])
       }
-    };
+    }
+    
+    return preferenceArray;
+  };
 
   // Confirm numbers
-  function includeNum(){
-    var getNumbers = confirm("Would you like to include numbers?\nExample: 1,2,3,...");
-      console.log(getNumbers);
-      if (getNumbers === true) {
-        // Concat array numberArray to preferenceArray
-        preferenceArray.concat[numberArray]
+  function includeNum() {
+    getNumbers = confirm("Would you like to include numbers?\nExample: 1,2,3,...");
+    console.log(getNumbers);
+    if (getNumbers === true) {
+      // Concat array numberArray to preferenceArray
+      for (var i = 0; i < numberArray.length; i++) {
+        preferenceArray.push(numberArray[i])
       }
-    };
+    }
+    
+    return preferenceArray;
+  };
 
   // Confirm symbols
-  function includeSymbol(){
-    var getSymbols = confirm("Would you like to include symbols?\nExample: #, &, @...");
-      console.log(getSymbols);
-      if (getSymbols === true) {
-        // Concat array symbolArray to preferenceArray
-        preferenceArray.concat[symbolArray]
+  function includeSymbol() {
+    getSymbols = confirm("Would you like to include symbols?\nExample: #, &, @...");
+    console.log(getSymbols);
+    if (getSymbols === true) {
+      // Concat array symbolArray to preferenceArray
+      for (var i = 0; i < symbolArray.length; i++) {
+        preferenceArray.push(symbolArray[i])
       }
-    };
-    console.log(preferenceArray);
+    }
+    
+    return preferenceArray;
+  };
+
 
   includeUpper()
   includeLower()
   includeNum()
   includeSymbol()
+  console.log(pwLength)
+  // Loops through preferenceArray picking random characters until it reaches pwLength length
+  for (var i = 0; i < pwLength; i++) {
+    // Picks random characters
+    var rand = Math.floor(Math.random() * preferenceArray.length);
+    // Concatinates random characters to randomArray
+    randomArray.push(preferenceArray[rand])
+    console.log(randomArray)
 
-// Loops through preferenceArray picking random characters until it reaches pwLength length
-  for (var i = 0; i < pwLength; i++) { 
-  // Picks random characters
-var rand = Math.floor(Math.random() * preferenceArray.length);
-  // Concatinates random characters to randomArray
-randomArray.concat(preferenceArray[rand])
-return randomArray;
+    // return randomArray;
+  };
+
+  // convert password to string without commas
+  var finalPassword = randomArray.join("");
+  return finalPassword;
 };
 
 
-
-// convert password to string without commas
-var finalPassword  = randomArray.join(""); 
-alert("Your password is " + finalPassword);
-};
-
-// Generate the password
-generatePassword();
