@@ -32,6 +32,7 @@ var randomArray = []
 // An empty array for pushing user preferences
 var preferenceArray = []
 
+// Declaring variables
 var getUpper
 var getLower
 var getNumbers
@@ -41,6 +42,8 @@ var pwLength
 
 // function to build password
 function generatePassword() {
+  randomArray = []
+  preferenceArray = []
 
   // Initial popup boxes
   // password alert
@@ -52,7 +55,6 @@ function generatePassword() {
     pwLength = parseInt(prompt("Please enter a valid password length.", "8 to 128 characters"));
   }
   console.log(pwLength);
-
 
   // Confirm uppercase
   function includeUpper() {
@@ -66,7 +68,7 @@ function generatePassword() {
     }
     return preferenceArray;
   };
-  
+
 
   // Confirm lowercase
   function includeLower() {
@@ -78,7 +80,6 @@ function generatePassword() {
         preferenceArray.push(lowerArray[i])
       }
     }
-    
     return preferenceArray;
   };
 
@@ -92,7 +93,6 @@ function generatePassword() {
         preferenceArray.push(numberArray[i])
       }
     }
-    
     return preferenceArray;
   };
 
@@ -106,15 +106,14 @@ function generatePassword() {
         preferenceArray.push(symbolArray[i])
       }
     }
-    
     return preferenceArray;
   };
-
 
   includeUpper()
   includeLower()
   includeNum()
   includeSymbol()
+
   console.log(pwLength)
   // Loops through preferenceArray picking random characters until it reaches pwLength length
   for (var i = 0; i < pwLength; i++) {
@@ -123,8 +122,6 @@ function generatePassword() {
     // Concatinates random characters to randomArray
     randomArray.push(preferenceArray[rand])
     console.log(randomArray)
-
-    // return randomArray;
   };
 
   // convert password to string without commas
