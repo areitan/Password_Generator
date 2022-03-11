@@ -44,6 +44,7 @@ Password generator showing password
 5. I added an empty array to hold the character sets the user selected.
 6. I added an empty array to hold random characters selected for the password.
 7. I declared the variables I wanted to keep to use to store user preference input.
+8. I added the 2 arrays that start as empty inside the function to reset them as empty each time the function runs.
 
 
 ### Functions
