@@ -48,10 +48,7 @@ function generatePassword() {
   preferenceArray = []
 
   // Initial popup boxes
-  // password alert
-  alert("Would you like to generate a password?");
-
-  // Select length
+  // Prompt for user to select desired password length
   pwLength = parseInt(prompt("Please enter password length.", "Select 8 to 128 characters"));
   while ((pwLength < 8) || (pwLength > 128) || isNaN(pwLength)) {
     pwLength = parseInt(prompt("Please enter a valid password length.", "8 to 128 characters"));
@@ -63,7 +60,7 @@ function generatePassword() {
     getUpper = confirm("Would you like to include uppercase letters?\nExample: A,B,C,...");
     console.log(getUpper);
     if (getUpper === true) {
-      // Concat array upperArray to preferenceArray
+      // pushes array upperArray to preferenceArray
       for (var i = 0; i < upperArray.length; i++) {
         preferenceArray.push(upperArray[i])
       }
@@ -77,7 +74,7 @@ function generatePassword() {
     getLower = confirm("Would you like to include lowercase letters?\nExample: a, b, c...");
     console.log(getLower);
     if (getLower === true) {
-      // Concat array lowerArray to preferenceArray
+      // pushes array lowerArray to preferenceArray
       for (var i = 0; i < lowerArray.length; i++) {
         preferenceArray.push(lowerArray[i])
       }
@@ -90,7 +87,7 @@ function generatePassword() {
     getNumbers = confirm("Would you like to include numbers?\nExample: 1,2,3,...");
     console.log(getNumbers);
     if (getNumbers === true) {
-      // Concat array numberArray to preferenceArray
+      // pushes array numberArray to preferenceArray
       for (var i = 0; i < numberArray.length; i++) {
         preferenceArray.push(numberArray[i])
       }
@@ -103,7 +100,7 @@ function generatePassword() {
     getSymbols = confirm("Would you like to include symbols?\nExample: #, &, @...");
     console.log(getSymbols);
     if (getSymbols === true) {
-      // Concat array symbolArray to preferenceArray
+      // pushes array symbolArray to preferenceArray
       for (var i = 0; i < symbolArray.length; i++) {
         preferenceArray.push(symbolArray[i])
       }
@@ -121,7 +118,7 @@ function generatePassword() {
   for (var i = 0; i < pwLength; i++) {
     // Picks random characters
     var rand = Math.floor(Math.random() * preferenceArray.length);
-    // Concatinates random characters to randomArray
+    // pushes random characters to randomArray
     randomArray.push(preferenceArray[rand])
     console.log(randomArray)
   };
