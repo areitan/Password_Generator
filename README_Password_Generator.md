@@ -4,6 +4,9 @@
 
 The goal was to create a password generator that will generate a random password given user-selected password length and character sets (potentially including numbers, uppercase letters, lowercase letters, and/or symbols).
 
+- [Git Hub Repository](https://github.com/areitan/Password_Generator)
+- [Password Generator](https://areitan.github.io/Password_Generator/)
+
 Display of provided password generator box
 
 ![Display of password generator box](/assets/images/03-javascript-homework-demo.png)
@@ -42,9 +45,6 @@ Confirm for special characters
 
 
 ## Process
-
-- [Git Hub Repository](https://github.com/areitan/Password_Generator)
-- [Password Generator]()
 
 
 ### Thinking Through The Problem
