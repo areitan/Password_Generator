@@ -1,5 +1,6 @@
 # Password Generator
 
+
 ## Description
 
 The goal was to create a password generator that will generate a random password given user-selected password length and character sets (potentially including numbers, uppercase letters, lowercase letters, and/or symbols).
@@ -86,6 +87,7 @@ Confirm for special characters
 
 1. I used ```.join``` in order take the characters that were selected into my array for the randomly selected characters and join them into a string to form the final password.
 
+
 ## How To Contribute
 
 As always suggestions are welcome. I have used the methods I have at hand at the moment, but there are many ways to get to the same end. There may be a more elegant way to write th is code, and input is welcome.
@@ -113,6 +115,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
 
 ## Credits
 
