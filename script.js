@@ -42,7 +42,7 @@ var pwLength
 
 // function to build password
 function generatePassword() {
-  
+
   // Resetting arrays for selecting characters for password each time funcion runs
   randomArray = []
   preferenceArray = []
